@@ -1,0 +1,37 @@
+.input-container {
+    height: 60px;
+    width: 700px;
+    border: solid black;
+    border-radius: 5px; 
+    display: flex;
+}
+
+.text-container {
+    position: relative;
+    bottom: 10px;
+    height: auto;
+    margin-left: 2%;
+    margin-bottom: 30%;
+}
+
+p {
+    font: 24px Arial, sans-serif;
+}
+
+
+.carat-container {
+    position: relative;
+    bottom: 57px;
+}
+
+.input-focused {
+    background-color: #D0D0D0;
+}
+
+.input-unfocused {
+    background-color: white;
+}
+
+.default-text {
+    color: slategray
+}
