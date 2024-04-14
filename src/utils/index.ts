@@ -1,3 +1,3 @@
 import calculateTextWidth from "./calculateTextWidthAndHeight";
 
-export default calculateTextWidth
+export default calculateTextWidth;

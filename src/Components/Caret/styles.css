@@ -1,21 +1,20 @@
 .carat-cursor {
-    height: 42px;
-    width: 2px;
-    color: red;
-    background-color: black;
-    animation: animate 1s infinite; 
-    margin-left: 1px;
+  height: 42px;
+  width: 2px;
+  color: red;
+  background-color: black;
+  animation: animate 1s infinite;
+  margin-left: 1px;
 }
 
-@keyframes animate{ 
-    0%{ 
-      opacity: 0; 
-    } 
-    50%{ 
-      opacity: 1; 
-    } 
-    100%{ 
-      opacity: 0; 
-    } 
-  } 
-
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

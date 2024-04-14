@@ -1,55 +1,58 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { Caret } from "../index";
 import calculateTextWidth from "../../utils";
-import "./styles.css"
+import "./styles.css";
 
 interface InputFieldProps {
-    hiddenValue?: string;
-    isFocused: boolean;
-    passwordHidden?: boolean;
-    type: "username" | "password"
-    value: string;
+  hiddenValue?: string;
+  isFocused: boolean;
+  passwordHidden?: boolean;
+  type: "username" | "password";
+  value: string;
 }
 
 const InputField = (props: InputFieldProps) => {
-    const { hiddenValue, isFocused, passwordHidden, type, value } = props
+  const { hiddenValue, isFocused, passwordHidden, type, value } = props;
 
-    const [textWidth, setTextWidth] = useState<number>(0)
+  const [textWidth, setTextWidth] = useState<number>(0);
 
-    useEffect(() => {
-        
-        const textWidth = calculateTextWidth({textContent: passwordHidden ? "*".repeat(value.length) : value, font: "24px arial"})
-        
-        setTextWidth(textWidth.width)
-    }, [passwordHidden, textWidth, value])
+  useEffect(() => {
+    const textWidth = calculateTextWidth({
+      textContent: passwordHidden ? "*".repeat(value.length) : value,
+      font: "24px arial",
+    });
 
-    const defaultText = type === "username" ? "Username" : "Password"
+    setTextWidth(textWidth.width);
+  }, [passwordHidden, textWidth, value]);
 
-    const inputFocusedStateClassName = isFocused ? "input-focused" : "input-unfocused"
+  const defaultText = type === "username" ? "Username" : "Password";
 
-    return (
-        <>  
-        <div className={`${"input-container"} ${inputFocusedStateClassName}`}>
-            <div className="text-container">
-                <div className="inner-container">
-                    {
-                        value.length === 0 ?
-                            <p className="default-text">{defaultText}</p>
-                        :
-                        <p className="default-text"></p>
-                    }
-                    <p>{passwordHidden ? hiddenValue : value}</p>
-                    <div className="carat-container" style={{ position: "relative", left: textWidth }}>
-                        {
-                        (value.length > 0 && isFocused)  && <Caret />
-                        }
+  const inputFocusedStateClassName = isFocused
+    ? "input-focused"
+    : "input-unfocused";
 
-                    </div>
-                </div>
+  return (
+    <>
+      <div className={`${"input-container"} ${inputFocusedStateClassName}`}>
+        <div className="text-container">
+          <div className="inner-container">
+            {value.length === 0 ? (
+              <p className="default-text">{defaultText}</p>
+            ) : (
+              <p className="default-text"></p>
+            )}
+            <p>{passwordHidden ? hiddenValue : value}</p>
+            <div
+              className="carat-container"
+              style={{ position: "relative", left: textWidth }}
+            >
+              {value.length > 0 && isFocused && <Caret />}
             </div>
+          </div>
         </div>
-        </>
-    )
-}
+      </div>
+    </>
+  );
+};
 
-export default React.memo(InputField)
+export default React.memo(InputField);

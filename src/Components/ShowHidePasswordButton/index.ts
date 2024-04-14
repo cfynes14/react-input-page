@@ -1,3 +1,3 @@
 import ShowHidePasswordbutton from "./ShowHidePasswordButton";
 
-export default ShowHidePasswordbutton
+export default ShowHidePasswordbutton;

@@ -5,4 +5,11 @@ import InputField from "./InputField";
 import Instructions from "./Instructions";
 import ShowHidePasswordbutton from "./ShowHidePasswordButton";
 
-export { Button, Caret, Error, InputField, Instructions, ShowHidePasswordbutton };
+export {
+  Button,
+  Caret,
+  Error,
+  InputField,
+  Instructions,
+  ShowHidePasswordbutton,
+};

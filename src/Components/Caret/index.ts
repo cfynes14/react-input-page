@@ -1,3 +1,3 @@
 import Caret from "./Caret";
 
-export default Caret
+export default Caret;

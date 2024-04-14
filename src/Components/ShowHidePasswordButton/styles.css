@@ -1,19 +1,19 @@
 #box-container {
-    height: 60px;
-    width: 60px;
-    border: solid black;
-    border-radius: 5px;
-    margin-left: 10px;
+  height: 60px;
+  width: 60px;
+  border: solid black;
+  border-radius: 5px;
+  margin-left: 10px;
 }
 
 .show-password-focused {
-    background-color: #D0D0D0;
+  background-color: #d0d0d0;
 }
 
 .show-password-unfocused {
-    background-color: white;
+  background-color: white;
 }
 
 .image-container {
-    margin-top: 5px;
+  margin-top: 5px;
 }

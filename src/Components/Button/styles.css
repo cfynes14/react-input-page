@@ -1,14 +1,14 @@
 button {
-    height: 60px;
-    width: 250px;
-    background-color: white;
-    border-radius: 5px;
+  height: 60px;
+  width: 250px;
+  background-color: white;
+  border-radius: 5px;
 }
 
 .button-focused {
-    background-color: #D0D0D0;
+  background-color: #d0d0d0;
 }
 
 .button-unfocused {
-    background-color: white;
+  background-color: white;
 }

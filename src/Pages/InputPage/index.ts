@@ -1,3 +1,3 @@
 import InputPage from "./InputPage";
 
-export default InputPage
+export default InputPage;
